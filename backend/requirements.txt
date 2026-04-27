@@ -1,0 +1,29 @@
+# --- Web Server & API Framework ---
+
+# used for creating the /voices and /tts endpoints
+
+fastapi>=0.95.0
+
+# The ASGI server that runs the FastAPI app
+
+# [standard] installs 'uvloop' for higher performance
+
+uvicorn[standard]>=0.22.0
+
+# Used for data validation (The TTSRequest class)
+
+pydantic>=1.10.0
+
+# --- Audio & AI Generation ---
+
+# The Coqui TTS library (VITS models)
+
+TTS>=0.22.0
+
+# Required for numerical array operations (Audio processing)
+
+numpy>=1.22.0
+
+# (Optional) If you face issues with file handling
+
+requests

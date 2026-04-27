@@ -1,0 +1,33 @@
+# Python virtual environments
+# Common names: venv/, .venv/, env/, backend/backend-venv/
+venv/
+.venv/
+env/
+backend/backend-venv/
+
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+
+# Node
+node_modules/
+lina-signspeak/node_modules/
+
+# Environment variables
+.env
+.env.*
+
+# Build / distribution
+build/
+dist/
+*.egg-info/
+
+# Editor directories
+.vscode/
+
+# Logs
+.log
+
+/frontend/node_modules/
+
+

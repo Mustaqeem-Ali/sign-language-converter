@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 20% 7%;
+    --foreground: 210 20% 92%;
+
+    --card: 220 18% 12%;
+    --card-foreground: 210 20% 92%;
+
+    --popover: 220 18% 12%;
+    --popover-foreground: 210 20% 92%;
+
+    --primary: 152 68% 50%;
+    --primary-foreground: 220 20% 7%;
+
+    --secondary: 220 16% 18%;
+    --secondary-foreground: 210 20% 92%;
+
+    --muted: 220 14% 16%;
+    --muted-foreground: 215 12% 55%;
+
+    --accent: 152 68% 50%;
+    --accent-foreground: 220 20% 7%;
+
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 210 20% 98%;
+
+    --border: 220 14% 20%;
+    --input: 220 14% 20%;
+    --ring: 152 68% 50%;
+
+    --radius: 0.75rem;
+
+    --glass-bg: 220 18% 12% / 0.6;
+    --glass-border: 220 14% 30% / 0.3;
+    --glow-primary: 152 68% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+@layer components {
+  .glass {
+    background: hsla(var(--glass-bg));
+    backdrop-filter: blur(20px) saturate(1.2);
+    border: 1px solid hsla(var(--glass-border));
+  }
+  .glow-dot {
+    box-shadow: 0 0 8px 2px hsl(var(--glow-primary) / 0.6),
+                0 0 20px 4px hsl(var(--glow-primary) / 0.3);
+  }
+}
+
+@layer utilities {
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
